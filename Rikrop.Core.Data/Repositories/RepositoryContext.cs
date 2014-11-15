@@ -15,7 +15,6 @@ namespace Rikrop.Core.Data.Repositories
             _dbContext = dbContext;
         }
 
-        // TODO: VM: Здесь должна лежать абстракция, которая отдаёт наборы данных.
         public DbContext DbContext { get { return _dbContext; } }
 
         public void Save()

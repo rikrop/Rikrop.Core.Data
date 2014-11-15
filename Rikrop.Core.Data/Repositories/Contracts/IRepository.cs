@@ -50,5 +50,10 @@ namespace Rikrop.Core.Data.Repositories.Contracts
         /// </summary>
         /// <param name="entity"></param>
         void Delete(TEntity entity);
+        /// <summary>
+        /// Удалить коллекцию записей
+        /// </summary>
+        /// <param name="entities"></param>
+        void Delete(IReadOnlyCollection<TEntity> entities);
     }
 }

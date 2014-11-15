@@ -65,6 +65,13 @@ namespace Rikrop.Core.Data.Repositories
             Context.SaveChanges();
         }
 
+        public virtual void Delete(IEnumerable<TEntity> entities)
+        {
+            if (entities == null || !entities.Any()) return;
+            Data.RemoveRange(entities);
+            Context.SaveChanges();
+        }
+
         public void Commit()
         {
             Context.SaveChanges();
